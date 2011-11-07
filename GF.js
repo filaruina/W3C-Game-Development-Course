@@ -17,13 +17,13 @@ var GF = function(){
             var computedStyle = window.getComputedStyle(currentEl);
 
             if (states.left) {
-                currentEl.style.left = computedStyle.left - 2;
+                currentEl.style.left = (parseInt(computedStyle.left, 10) - 2) + "px";
             } else if (states.up) {
-                currentEl.style.top = computedStyle.top - 2;
+                currentEl.style.top = ( parseInt(computedStyle.top, 10) - 2 ) + "px";
             } else if (states.right) {
-                currentEl.style.left = computedStyle.left + 2;
+                currentEl.style.left = ( parseInt(computedStyle.left, 10) + 2 ) + "px";
             } else if (states.down) {
-                currentEl.style.top = computedStyle.top + 2;
+                currentEl.style.top = ( parseInt(computedStyle.top, 10) + 2 ) + "px";
             }
         }
 
@@ -68,6 +68,7 @@ var GF = function(){
 
     var createScreen = function(parentElement) {
         mainScreen = document.createElement('div');
+        mainScreen.style.position = "relative";
         mainScreen.style.width = "200px";
         mainScreen.style.height = "200px";
         mainScreen.style.top = "0";
