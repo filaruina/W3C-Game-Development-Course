@@ -1,29 +1,26 @@
-<!DOCTYPE HTML>
 <html>
     <head>
-        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-        <title>Game Development Course</title>
+        <style>
+            #mainScreen {
+                height: 430px;
+                width: 500px;
+                position: relative;
+            }
+
+            #player {    
+                position: absolute;
+                border: 1px solid #bada55;    
+                width: 50px;    
+                height: 50px;    
+            }    
+
+            #platform {
+                position: absolute;
+                border: 1px solid #000;    
+            }
+        </style>
     </head>
     <body>
+        <script src="GF.js"></script>
     </body>
-    <script src="GF.js" type="text/javascript" charset="utf-8"></script>
-    <script type="text/javascript" language="javascript" charset="utf-8">
-    //<![CDATA[
-        var game = new GF();
-        game.createElement({
-            domEl: "div",
-            style: {
-                width: "20px",
-                height: "20px",
-                backgroundColor: "#000",
-                position: "absolute",
-                left: "0px",
-                top: "0px"
-            }
-        });
-        game.start({
-            "debug": true
-        });
-    //]]>
-    </script>
 </html>
